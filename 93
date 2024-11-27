@@ -1,0 +1,16 @@
+#include <stdio.h>
+int countWords(char *str) {
+    int count = 0;
+    char *p = str;
+    while (*p != '\0') {
+        if (*p == ' ' || *(p + 1) == '\0')
+            count++;
+        p++;
+    }
+    return count;
+}
+int main() {
+    char str[] = "Hello World in C";
+    printf("Word count: %d\n", countWords(str));
+    return 0;
+}
