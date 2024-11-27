@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    FILE *file = fopen("textfile.txt", "r");
+    if (file == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+    char ch;
+    int vowelCount = 0;
+    while ((ch = fgetc(file)) != EOF) {
+        ch = tolower(ch);
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            vowelCount++;
+        }
+    }
+
+    fclose(file);
+    printf("Number of vowels: %d\n", vowelCount);
+    return 0;
+}
