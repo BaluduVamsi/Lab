@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    char str[] = "Hello World";
+    int lenInc = 0, lenExc = 0;
+    char *p = str;
+    while (*p != '\0') {
+        lenInc++;
+        if (*p != ' ')
+            lenExc++;
+        p++;
+    }
+    printf("Length including spaces: %d\n", lenInc);
+    printf("Length excluding spaces: %d\n", lenExc);
+    return 0;
+}
