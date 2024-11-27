@@ -1,0 +1,11 @@
+#include <stdio.h>
+void calculate(int *num, int *square, int *cube) {
+    *square = (*num) * (*num);
+    *cube = (*num) * (*num) * (*num);
+}
+int main() {
+    int n = 3, sq, cu;
+    calculate(&n, &sq, &cu);
+    printf("Square: %d, Cube: %d\n", sq, cu);
+    return 0;
+}
